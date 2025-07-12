@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sketch-preproc"
+version = "0.1.0"
+description = "Sketch preprocessing pipelines V3 and V4"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Sketch Preproc Team"},
+]
+dependencies = [
+    "opencv-python>=4.10",
+    "opencv-contrib-python>=4.10", 
+    "torch>=2.2",
+    "kornia>=0.7",
+    "scikit-image>=0.19",
+    "sknw",
+    "numpy>=1.20",
+    "scipy>=1.7",
+    "pyyaml>=6.0",
+    "pillow>=9.0",
+    "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0",
+    "flake8>=6.0",
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.setuptools.packages.find]
+where = ["src"]

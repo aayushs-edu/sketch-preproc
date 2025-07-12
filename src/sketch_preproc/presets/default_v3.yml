@@ -1,0 +1,37 @@
+# src/sketch_preproc/presets/default_v3.yml
+# Default V3 preset
+max_size: 1024
+clahe_clip: 2.0
+clahe_grid: 8
+guided_r: 8
+guided_eps: 0.01
+wolf_k: 0.5
+wolf_w: 25
+morph_k: 3
+spur_len: 4
+keep_pct: 2.0
+min_len_factor: 0.02
+outer_band: 24
+
+edge_model: "auto"
+use_shading_removal: true
+shading_method: "bilateral"
+use_sam_band: true
+use_local_seeding: true
+local_tile_size: 64
+min_area: 10
+max_eccentricity: 0.95
+roundness_threshold: 0.4
+morph_close_size: 3
+morph_open_size: 2
+use_saliency_fusion: true
+saliency_weight: 0.3
+use_dual_threshold: true
+weak_sigma: 0.5
+enclosed_thr: 0.65
+
+alpha: 0.7
+tau_primary: 0.30
+tau_detail: 0.20
+tau_lo_primary: 0.18
+tau_lo_detail: 0.12
